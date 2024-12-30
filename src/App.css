@@ -1,0 +1,226 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.header {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.header-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Затемнение */
+  z-index: 0;
+}
+
+.header-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  padding-top: 20%;
+}
+
+.header-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.header-content p {
+  font-size: 24px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about, .science-health, .facilitator-approach, .benefits, .pricing, .faq, .contact-form {
+  padding: 60px 20px;
+  margin: 40px auto;
+  max-width: 80%;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.about:hover, .science-health:hover, .facilitator-approach:hover, .benefits:hover, .pricing:hover, .faq:hover, .contact-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  color: #6c5ce7;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.science-health-content {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.science, .health {
+  flex: 1;
+}
+
+.science h3, .health h3 {
+  color: #6c5ce7;
+  margin-bottom: 15px;
+}
+
+.benefits-grid, .pricing-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.benefit, .pricing-card {
+  flex: 1 1 300px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.benefit i {
+  font-size: 40px;
+  color: #6c5ce7;
+  margin-bottom: 15px;
+}
+
+.pricing-card .price {
+  font-size: 24px;
+  font-weight: bold;
+  color: #6c5ce7;
+}
+
+.pricing-card button {
+  background-color: #6c5ce7;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pricing-card button:hover {
+  background-color: #5a4ac7;
+}
+
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.faq-item h3 {
+  color: #6c5ce7;
+}
+
+.contact-form {
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: 0 auto 20px;
+}
+
+.form input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.form button {
+  background-color: #6c5ce7;
+  color: white;
+  border: none;
+  padding: 15px;
+  font-size: 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form button:hover {
+  background-color: #5a4ac7;
+}
+
+.telegram-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #0088cc;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+.telegram-button:hover {
+  background-color: #0077b3;
+}
+
+.telegram-button i {
+  font-size: 24px;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    padding-top: 30%;
+  }
+  .header-content h1 {
+    font-size: 36px;
+  }
+  .header-content p {
+    font-size: 18px;
+  }
+  .about, .science-health, .facilitator-approach, .benefits, .pricing, .faq, .contact-form {
+    max-width: 90%;
+    padding: 40px 15px;
+  }
+  .science-health-content {
+    flex-direction: column;
+  }
+}
